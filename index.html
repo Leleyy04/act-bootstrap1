@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD NI LEY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Lynnard Admin Panel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active menu-item" href="#" data-menu="dashboard">
+                                
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#" data-menu="users">
+                              
+                                Users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#" data-menu="reports">
+                                
+                                Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#" data-menu="settings">
+                                
+                                Settings
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#" data-menu="messages">
+                                
+                                Messages
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                </div>
+
+                <!--  Cards -->
+               
+                <div class="row mb-4"> <!--ito outer stracture to-->
+                    <div class="col-md-3"><!-- then ito yung columns-->
+                        <div class="card stat-card"><!-- ito stat cards kada column is may laman itong card components with card body para sa main content then yungd-flext is para sa flexbox alignment to space content -->
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="text-muted">Total Users</h6>
+                                        <h3>6,099</h3>
+                                    </div>
+                                    <div class="stat-icon">
+                                        
+                                    </div>
+                                </div>
+                                <div class="progress mt-2" style="height: 5px;"> <!-- then eto last progress bar-->
+                                    <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="text-muted">Total Sales</h6>
+                                        <h3>PHP 364,552</h3>
+                                    </div>
+                                    <div class="stat-icon">
+                                     
+                                    </div>
+                                </div>
+                                <div class="progress mt-2" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="text-muted">Visits</h6>
+                                        <h3>12,352</h3>
+                                    </div>
+                                    <div class="stat-icon">
+                                        
+                                    </div>
+                                </div>
+                                <div class="progress mt-2" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- Chart -->
+                <div class="card mb-4"><!-- eto yung card structure then tong card is bootstrap class sya para sa card container -->
+                    <!-- then tong mb-4 is para mag add sya ng margin bottom of 1.5rem parang 16px na space bago sa next elements-->
+                    <div class="card-header"> <!-- eto alam nyona card header headers nag lalaman to ng title para sa chart-->
+                        <h5>Monthly Analytics</h5>
+                    </div>
+                    <div class="card-body"><!--card body dito namn yung main content-->
+                        <canvas id="dashboardChart" height="300"></canvas>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+  
+    <!-- Bootstrap JS  makukuha nyo sya dito "https://getbootstrap.com/docs/5.0/getting-started/javascript/" copy nyo yan tas paste nyolang sa web pages same nung css bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- ito naman ay kayo na gagawa tulad ng dito sa dash board gumamit ako ng label at ilang function alert then yung slide bar para sa cp yun lang   Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

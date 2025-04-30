@@ -1,0 +1,179 @@
+:root {
+    /* Mga unang  kulay para sa theme */
+    --primary-color: #8a2be2; /* Violet - pang una kulay */
+    --primary-light: #b57edc; /* Light violet - para sa active states */
+    --primary-dark: #5e1a9a; /* Dark violet - di pa nagagamit */
+}
+
+
+/* Pang-base na style ng buong page - nag-aadjust para sa fixed navbar */
+
+body {
+    padding-top: 56px; /* Kapareho ng height ng navbar */
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+
+/* Style ng navbar - purple may konting shadow */
+
+.navbar {
+    background-color: var(--primary-color); /* Gamit yung violet na variable */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Konting shadow sa ilalam */
+}
+
+
+/* Style ng brand name sa navbar - maputi  at bold */
+
+.navbar-brand {
+    font-weight: 600; /* Semi-bold */
+    color: white !important; /* Sapilitang puti ang kulay */
+}
+
+
+/* Sidebar style - naka-fixed position at scrollable */
+
+.sidebar {
+    height: calc(100vh - 56px); /* Full height minus navbar */
+    position: fixed; /* Naka-stick sa gilid */
+    left: 0;
+    width: 250px; /* Fixed na lapad */
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Shadow sa kanan */
+    transition: all 0.3s; /* Smooth animation */
+    z-index: 1000; /* Laging nasa harapan */
+    overflow-y: auto; /* Scrollable pag mahaba */
+}
+
+
+/* Style ng mga links sa sidebar */
+
+.sidebar .nav-link {
+    padding: 0.75rem 1rem; /* Spacing sa loob */
+    color: #333; /* Dark gray text */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 2px; /* Konting space sa baba */
+}
+
+
+/* Hover effect sa sidebar links */
+
+.sidebar .nav-link:hover {
+    background-color: #f0f0f0; /* Light gray kapag naka-hover */
+}
+
+
+/* Active link sa sidebar */
+
+.sidebar .nav-link.active {
+    background-color: var(--primary-light); /* Light violet */
+    color: white; /* White text */
+}
+
+
+/* Style ng icons sa sidebar */
+
+.sidebar .nav-link i {
+    width: 20px; /* Fixed width */
+    text-align: center; /* Naka-center ang icon */
+}
+
+
+/* Main content area - umadjust kapag may sidebar */
+
+.main-content {
+    margin-left: 250px; /* Space para sa sidebar */
+    padding: 20px; /* Spacing sa loob */
+    transition: all 0.3s; /* Smooth animation */
+}
+
+
+/* Responsive style para sa mobile (maliit na screen) */
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        margin-left: -250px; /* Itago ang sidebar */
+    }
+    .sidebar.show {
+        margin-left: 0; /* Ipakita kapag active */
+    }
+    .main-content {
+        margin-left: 0; /* Full width kapag walang sidebar */
+    }
+}
+
+
+/* Style ng mga stat cards - may hover effect */
+
+.stat-card {
+    border: none; /* Walang border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth hover effect */
+    margin-bottom: 20px; /* Space sa baba */
+}
+
+
+/* Hover effect sa cards - umangat ng konti */
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Umangat ng 5px */
+}
+
+
+/* Style ng icons sa stat cards */
+
+.stat-card .stat-icon {
+    font-size: 2rem; /* Malaking icon */
+    color: var(--primary-light); /* Light violet */
+}
+
+
+/* Style ng progress bar */
+
+.stat-card .progress-bar {
+    background-color: var(--primary-color); /* Violet na kulay */
+}
+
+
+/* Style ng notification badge */
+
+.notification-icon {
+    position: relative; /* Para sa absolute positioning ng badge */
+}
+
+.notification-icon .badge {
+    position: absolute; /* Nasa ibabaw ng icon */
+    top: -5px; /* Pataas ng konti */
+    right: -5px; /* Pakanan ng konti */
+    font-size: 0.6rem; /* Maliit na text */
+}
+
+
+
+/* General card style */
+
+
+.card {
+    border: none; /* Walang border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+
+
+/* Card header style */
+
+
+.card-header {
+    background-color: white; /* Puti ang background */
+    border-bottom: 1px solid rgba(0,0,0,0.1); /* Light border sa ilalim */
+}
+
+
+
+/* Cursor pointer para sa mga clickable items */
+
+
+.menu-item {
+    cursor: pointer; /* Nagiging pointer ang cursor */
+}
